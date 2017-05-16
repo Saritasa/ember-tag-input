@@ -1,6 +1,10 @@
 {{#each tags as |tag index|~}}
   <li class="emberTagInput-tag">
-    {{tag}}
+    {{#if property}}
+      {{get tag property}}
+    {{else}}
+      {{tag}}
+    {{/if}}
     {{#if showRemoveButtons}}
       <a class="emberTagInput-remove" {{action 'removeTag' index}}></a>
     {{/if}}

@@ -28,6 +28,8 @@ export default Ember.Component.extend({
 
   placeholder: '',
 
+  property: '',
+
   addNewTag(tag) {
     const tags = this.get('tags');
     const addTag = this.get('addTag');
